@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# ignore a specific file
+git_commands.txt
+package-lock.json
+package.json
