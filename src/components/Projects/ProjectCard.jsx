@@ -15,17 +15,19 @@ const ProjectCard = (props) => {
         alignContent: "space-between",
       }}
     >
-      <Card.Img
-        variant="top"
-        src={props.imgPath}
-        alt="card-img"
-        style={{
-          height: "200px",
-          objectFit: "contain",
-          alignSelf: "flex-start",
-          borderRadius: "10%",
-        }}
-      />
+      {props.imgPath && (
+        <Card.Img
+          variant="top"
+          src={props.imgPath}
+          alt="card-img"
+          style={{
+            height: "200px",
+            objectFit: "contain",
+            alignSelf: "flex-start",
+            borderRadius: "10%",
+          }}
+        />
+      )}
       <Card.Body
         style={{
           display: "flex",
@@ -38,23 +40,25 @@ const ProjectCard = (props) => {
         <Card.Text style={{ textAlign: "justify",fontSize:"15px" }}>
           {props.description}
         </Card.Text>
-        <Button
-          variant="primary"
-          href={props.ghLink}
-          target="_blank"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            alignContent: "flex-end",
-            textAlign: "center",
-            position: "relative",
-            bottom: "0px",
-          }}
-        >
-          <BsGithub /> &nbsp;
-          {props.isBlog ? "Blog" : "GitHub"}
-        </Button>
+        {props.ghLink && (
+          <Button
+            variant="primary"
+            href={props.ghLink}
+            target="_blank"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              alignContent: "flex-end",
+              textAlign: "center",
+              position: "relative",
+              bottom: "0px",
+            }}
+          >
+            <BsGithub /> &nbsp;
+            {props.isBlog ? "Blog" : "GitHub"}
+          </Button>
+        )}
         {"\n"}
         {"\n"}
 
