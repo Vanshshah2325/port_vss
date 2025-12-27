@@ -12,6 +12,7 @@ import Project from './pages/Projects'
 import Experience from './pages/Experience'
 import Resume from './pages/Resume'
 import Contact from './pages/Contact'
+import Certificate from './pages/Certificate'
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -45,6 +46,7 @@ function App() {
           <Route path="/project" element={<Project />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/certificate" element={<Certificate />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>

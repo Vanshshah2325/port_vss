@@ -406,11 +406,22 @@ html {
   /* --------- */
   /* Footer */
   /* --------- */
+  /* make layout a column so footer can be pushed to bottom with margin-top:auto */
+  html, body, #root, .App {
+    height: 100%;
+  }
+  .App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
   .footer {
     background-color: rgb(1, 6, 36);
-    bottom: 0 !important;
     padding-top: 10px !important;
     padding-bottom: 8px !important ;
+    margin-top: auto; /* push footer to bottom when content is short */
+    width: 100%;
   }
   .footer-copywright {
     display: flex;

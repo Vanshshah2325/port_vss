@@ -1,0 +1,72 @@
+.certificate-section {
+  padding: 100px 0 60px;
+}
+.certificate-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+/* match site heading color */
+.certificate-title { color: var(--imp-bold-text-color) !important; }
+.muted {
+  color: #666;
+  margin-bottom: 24px;
+}
+.access-box {
+  display: inline-block;
+  text-align: left;
+  padding: 18px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.08);
+  margin-bottom: 18px;
+}
+.certificate-viewer.hidden { display: none; }
+.certificate-viewer.visible { display: block; margin-top: 18px; position: relative; }
+.cert-frame {
+  width: 100%;
+  height: 650px;
+  border: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.img-wrap { position: relative; display: inline-block; }
+.cert-img { max-width: 100%; height: auto; display: block; user-select: none; -webkit-user-drag: none; }
+.watermark {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-20deg);
+  font-size: 28px;
+  color: rgba(255,255,255,0.35);
+  pointer-events: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.notes { margin-top: 14px; color: #555; }
+.no-file { padding: 60px; border: 2px dashed #ddd; border-radius: 6px; }
+
+/* Gallery styles */
+.certificate-gallery { margin-top: 18px; }
+.thumb-col { display: flex; align-items: center; justify-content: center; }
+.thumb { width: 100%; cursor: pointer; border-radius: 6px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+.thumb img { width: 100%; height: 220px; object-fit: cover; display: block; user-select: none; -webkit-user-drag: none; }
+
+/* Modal viewer */
+.modal-body-center { display: flex; align-items: center; justify-content: center; padding: 20px; }
+.modal-img-wrap { position: relative; max-width: 100%; }
+.modal-cert-img { max-width: 100%; height: auto; display: block; border-radius: 4px; }
+.modal-watermark {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-18deg);
+  font-size: 36px;
+  color: rgba(255,255,255,0.32);
+  pointer-events: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* small screens */
+@media (max-width: 576px) {
+  .thumb img { height: 120px; }
+  .modal-watermark { font-size: 18px; }
+}
